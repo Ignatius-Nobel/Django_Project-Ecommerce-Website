@@ -3,7 +3,7 @@ from customers.models import Customer
 from products.models import Product
 # Model for Orders
 class Order(models.Model):
-    LIVE=1
+    LIVE=1 
     DELETE = 0
     DELETE_CHOICES = ((LIVE,'Live'),(DELETE,'Delete'))
     CART_STAGE = 0
@@ -24,3 +24,4 @@ class OrderedItem(models.Model):
     product = models.ForeignKey(Product,on_delete=models.SET_NULL,related_name='added_carts',null=True)
     quantity = models.IntegerField(default=1)
     owner = models.ForeignKey(Order,on_delete=models.CASCADE,related_name='added_items')
+
