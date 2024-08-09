@@ -126,7 +126,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATIC_URL = 'brocart_files/'
+STATIC_URL = 'brocart/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
